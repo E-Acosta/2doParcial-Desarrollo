@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -120,6 +121,11 @@ public class editActivity extends AppCompatActivity {
             etNombre.setText(personas.get(0).getNombre());
             etCedula.setText(personas.get(0).getCedula());
             etSalrio.setText(personas.get(0).getSalario());
+            etCedula.setFocusable(false);
+            etCedula.setEnabled(false);
+            etCedula.setCursorVisible(false);
+            etCedula.setKeyListener(null);
+            etCedula.setBackgroundColor(Color.TRANSPARENT);
         }catch (Exception e){
             Log.e("PUTAMADRE","ERROR EN ESTA MONDA");
         }
